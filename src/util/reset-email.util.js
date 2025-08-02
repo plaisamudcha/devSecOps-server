@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import fs from "fs";
-import createError from "./create-error.util";
+import createError from "./create-error.util.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

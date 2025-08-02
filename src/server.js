@@ -1,6 +1,6 @@
 import app from "./app.js";
 import dotenv from "dotenv";
-import shutdown from "./utils/shutdown.util.js";
+import shutdown from "../src/util/shutdown.util.js";
 
 dotenv.config();
 const PORT = process.env.PORT || 3000;
