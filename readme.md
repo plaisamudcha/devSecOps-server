@@ -1,17 +1,3 @@
----
-ตัวอย่าง env
-PORT=3000
-DATABASE_URL=mysql://root:123456@localhost:3306/devsecops
-JWT_SECRET=mygroupdevsecops_jwt_secret
-JWT_REFRESH_SECRET=mygroupdevsecops_jwt_refresh_secret
-JWT_RESET_SECRET=mygroupdevsecops_jwt_reset_secret
-EMAIL_USER=samudcha.d@gmail.com
-EMAIL_PASS="fgax oscb vnpt htas"
-GOOGLE_CLIENT_ID=860908998541-cq74qbpcnfrbni2cupqthl32f8ham0i5.apps.googleusercontent.com
-FRONTEND_URL=http://localhost:5173
-TMDB_API_KEY=mygroupdevsecops_tmdb_api_key
----
-
 ## � Database Schema (ER Diagram)
 
 ```mermaid
