@@ -21,7 +21,12 @@ const tmdbFetch = async (endpoint, res) => {
   if (response.status === 401) createError(401, "Unauthorized access to TMDB");
   if (response.status === 403) createError(403, "Forbidden access to TMDB");
   const data = await response.json();
-  res.json(data);
+  res.status(200).json({
+    results: data.results,
+    page: data.page,
+    total_pages: data.total_pages,
+    total_results: data.total_results,
+  });
 };
 
 const tmdbController = {
@@ -35,7 +40,12 @@ const tmdbController = {
       const data = await response.json();
       if (data.results.length === 0)
         createError(404, "No movies found on TMDB");
-      res.status(200).json(data.results);
+      res.status(200).json({
+        results: data.results,
+        page: data.page,
+        total_pages: data.total_pages,
+        total_results: data.total_results,
+      });
     } catch (error) {
       next(error);
     }
@@ -54,7 +64,12 @@ const tmdbController = {
       const data = await response.json();
       if (data.results.length === 0)
         createError(404, "No movies found for the given query");
-      res.status(200).json(data.results);
+      res.status(200).json({
+        results: data.results,
+        page: data.page,
+        total_pages: data.total_pages,
+        total_results: data.total_results,
+      });
     } catch (error) {
       next(error);
     }
